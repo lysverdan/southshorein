@@ -34,15 +34,16 @@ h3 { font-size: 1.8rem; margin-bottom: 1rem; }
   transition: all 0.3s ease;
 }
 .primary { background: #001f3f; color: white; }
-.primary:hover { background: #003366; transform: translateY(-2px); }
-.secondary { background: transparent; border: 2px solid #b8860b; color: #b8860b; } /* Subtle gold */
+.primary:hover { background: #003366; }
+.secondary { background: transparent; border: 2px solid #b8860b; color: #b8860b; }
 .secondary:hover { background: #b8860b; color: white; }
 
-/* Hero */
+/* Hero - Unsplash direct URL, calm coastal vibe */
 .hero {
   height: 90vh;
   min-height: 600px;
-  background: url('images/hero-main.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 31, 63, 0.6), rgba(0, 31, 63, 0.6)), 
+              url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80') center/cover no-repeat;
   position: relative;
   color: white;
   text-align: center;
@@ -50,7 +51,6 @@ h3 { font-size: 1.8rem; margin-bottom: 1rem; }
   align-items: center;
 }
 .hero-overlay {
-  background: rgba(0, 31, 63, 0.55); /* Dark navy overlay for readability */
   position: absolute;
   inset: 0;
   display: flex;
@@ -62,10 +62,10 @@ h3 { font-size: 1.8rem; margin-bottom: 1rem; }
 
 /* Sections */
 .about, .why, .contact {
-  padding: 100px 0;
+  padding: 80px 0;
   text-align: center;
 }
-.services { background: #fff; padding: 100px 0; }
+.services { background: #fff; padding: 80px 0; }
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -104,7 +104,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Mobile Responsiveness */
+/* Mobile */
 @media (max-width: 768px) {
   h1 { font-size: 2.8rem; }
   h2 { font-size: 2.2rem; }
