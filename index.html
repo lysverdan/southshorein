@@ -1,398 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>South Shore Insurance Agency | Exclusive Insurance Brokerage in Chester, NS</title>
-    <meta name="description" content="Premier insurance brokerage serving Chester's coastal community since 1996. Yacht, marine, waterfront property, and luxury asset protection.">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-content">
-            <div class="logo">
-                <div class="logo-line"></div>
-                <div class="logo-text">
-                    <span class="logo-main">SOUTH SHORE</span>
-                    <span class="logo-sub">Insurance Agency</span>
-                </div>
-            </div>
-            <div class="nav-links">
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <a href="tel:902-275-5358" class="nav-btn">902-275-5358</a>
-            </div>
-            <button class="mobile-toggle" id="mobileToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
+/* Reset & Base */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background: #f8f9fa;
+}
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-image">
-            <img src="images/hero-yacht.jpg" alt="Luxury yachts in Chester harbor">
-            <div class="hero-overlay"></div>
-        </div>
-        
-        <!-- Graphic Elements -->
-        <div class="hero-graphics">
-            <div class="graphic-circle graphic-1"></div>
-            <div class="graphic-circle graphic-2"></div>
-            <div class="graphic-line line-1"></div>
-            <div class="graphic-line line-2"></div>
-            <div class="graphic-dot dot-1"></div>
-            <div class="graphic-dot dot-2"></div>
-            <div class="graphic-dot dot-3"></div>
-        </div>
-        
-        <div class="hero-content">
-            <div class="hero-badge">Est. 1996</div>
-            <h1 class="hero-title">Protecting What You've Built</h1>
-            <p class="hero-subtitle">Exclusive insurance brokerage for Chester's coastal community. Specializing in waterfront properties, marine assets, and comprehensive coverage solutions.</p>
-            <div class="hero-actions">
-                <a href="#contact" class="btn-primary">Schedule Consultation</a>
-                <a href="tel:902-275-5358" class="btn-secondary">Call Direct</a>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <span>Scroll</span>
-            <div class="scroll-line"></div>
-        </div>
-    </section>
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-    <!-- Trust Section -->
-    <section class="trust-section">
-        <div class="trust-grid">
-            <div class="trust-item">
-                <div class="trust-number">28+</div>
-                <div class="trust-label">Years of Service</div>
-            </div>
-            <div class="trust-item">
-                <div class="trust-number">$500M+</div>
-                <div class="trust-label">Assets Protected</div>
-            </div>
-            <div class="trust-item">
-                <div class="trust-number">1000+</div>
-                <div class="trust-label">Clients Served</div>
-            </div>
-            <div class="trust-item">
-                <div class="trust-number">24/7</div>
-                <div class="trust-label">Claims Support</div>
-            </div>
-        </div>
-    </section>
+/* Typography */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #001f3f; /* Deep navy */
+}
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="section-header">
-            <span class="section-label">What We Offer</span>
-            <h2 class="section-title">Comprehensive Protection</h2>
-        </div>
+h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+h2 { font-size: 2.8rem; margin-bottom: 1.5rem; text-align: center; }
+h3 { font-size: 1.8rem; margin-bottom: 1rem; }
 
-        <div class="services-grid">
-            <!-- Marine & Yacht -->
-            <div class="service-card large">
-                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800&q=80');">
-                    <div class="service-overlay"></div>
-                </div>
-                <div class="service-content">
-                    <h3>Marine & Yacht Insurance</h3>
-                    <p>Comprehensive coverage for vessels of all sizes. From sailboats to luxury yachts, we protect your investment on the water.</p>
-                    <ul class="service-features">
-                        <li>Hull & machinery coverage</li>
-                        <li>Liability protection</li>
-                        <li>Personal effects & equipment</li>
-                        <li>Navigation & racing coverage</li>
-                    </ul>
-                </div>
-            </div>
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.primary { background: #001f3f; color: white; }
+.primary:hover { background: #003366; transform: translateY(-2px); }
+.secondary { background: transparent; border: 2px solid #b8860b; color: #b8860b; } /* Subtle gold */
+.secondary:hover { background: #b8860b; color: white; }
 
-            <!-- Waterfront Property -->
-            <div class="service-card large">
-                <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1628624747186-a941c476b7ef?w=800&q=80');">
-                    <div class="service-overlay"></div>
-                </div>
-                <div class="service-content">
-                    <h3>Waterfront Properties</h3>
-                    <p>Specialized insurance for coastal homes, cottages, and estates. Protection tailored to Nova Scotia's unique maritime environment.</p>
-                    <ul class="service-features">
-                        <li>Primary & seasonal residences</li>
-                        <li>Dock & mooring coverage</li>
-                        <li>Flood & storm protection</li>
-                        <li>High-value home insurance</li>
-                    </ul>
-                </div>
-            </div>
+/* Hero */
+.hero {
+  height: 90vh;
+  min-height: 600px;
+  background: url('images/hero-main.jpg') center/cover no-repeat;
+  position: relative;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.hero-overlay {
+  background: rgba(0, 31, 63, 0.55); /* Dark navy overlay for readability */
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero p { font-size: 1.5rem; margin-bottom: 2rem; }
+.hero-ctas { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
 
-            <!-- Auto & Recreational -->
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M5 17h-2v-6l2-4h10l4 4v6h-2m-12 0a2 2 0 1 0 4 0m-4 0h4m8 0a2 2 0 1 0 4 0m-4 0h4"/>
-                    </svg>
-                </div>
-                <h4>Auto & Recreational</h4>
-                <p>Premium coverage for luxury vehicles, classic cars, and recreational vehicles.</p>
-            </div>
+/* Sections */
+.about, .why, .contact {
+  padding: 100px 0;
+  text-align: center;
+}
+.services { background: #fff; padding: 100px 0; }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+.service-card {
+  background: #f8f9fa;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+.service-card:hover { transform: translateY(-10px); }
 
-            <!-- Business Insurance -->
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="3" y="3" width="18" height="18" rx="2"/>
-                        <path d="M9 3v18M3 9h18M3 15h18"/>
-                    </svg>
-                </div>
-                <h4>Business Insurance</h4>
-                <p>Commercial coverage for marinas, charter operations, and coastal businesses.</p>
-            </div>
+/* Why List */
+.why ul {
+  list-style: none;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.why li {
+  font-size: 1.3rem;
+  margin: 20px 0;
+  padding-left: 40px;
+  position: relative;
+}
+.why li::before { content: "✓"; color: #b8860b; position: absolute; left: 0; font-size: 1.8rem; }
 
-            <!-- Life & Estate -->
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                        <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
-                    </svg>
-                </div>
-                <h4>Life & Estate Planning</h4>
-                <p>Wealth protection and legacy planning for families and business owners.</p>
-            </div>
+/* Footer */
+footer {
+  background: #001f3f;
+  color: white;
+  text-align: center;
+  padding: 40px 0;
+  font-size: 0.9rem;
+}
 
-            <!-- Travel -->
-            <div class="service-card">
-                <div class="service-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <circle cx="12" cy="12" r="10"/>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-                        <path d="M2 12h20"/>
-                    </svg>
-                </div>
-                <h4>Travel & Medical</h4>
-                <p>International coverage and emergency medical insurance for worldwide travel.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="about-content">
-            <div class="about-text">
-                <span class="section-label">Our Story</span>
-                <h2 class="section-title">Independent Brokerage, Personal Service</h2>
-                <div class="about-body">
-                    <p>Since 1996, South Shore Insurance Agency has served Chester and the surrounding coastal communities with distinction. Led by Aileen Heisler, a longtime Chester resident, our boutique brokerage offers something rare: truly independent advice backed by decades of local expertise.</p>
-                    
-                    <p>Unlike captive agents tied to a single insurer, we represent you—not the insurance companies. Our access to multiple premier carriers means we can craft coverage solutions perfectly suited to your unique needs, whether that's protecting a waterfront estate, insuring a yacht, or securing your family's legacy.</p>
-
-                    <div class="about-signature">
-                        <div class="signature-line"></div>
-                        <p class="signature-text">Aileen Heisler & Team</p>
-                    </div>
-                </div>
-            </div>
-            <div class="about-image">
-                <img src="images/couple-dock.jpg" alt="Chester waterfront">
-                <div class="about-badge">
-                    <div class="badge-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
-                        </svg>
-                    </div>
-                    <div class="badge-text">
-                        <div class="badge-title">IBANS Member</div>
-                        <div class="badge-sub">Licensed & Accredited</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section class="process">
-        <div class="process-content">
-            <div class="process-intro">
-                <span class="section-label">How We Work</span>
-                <h2 class="section-title">A Tailored Approach</h2>
-                <p class="process-description">We believe insurance should be as individual as you are. Our consultative process ensures you receive coverage that truly fits.</p>
-            </div>
-
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">01</div>
-                    <h4>Discovery</h4>
-                    <p>We begin by understanding your assets, lifestyle, and risk profile through a comprehensive consultation.</p>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-number">02</div>
-                    <h4>Analysis</h4>
-                    <p>Our team evaluates multiple carriers and policy options to identify the optimal coverage solutions.</p>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-number">03</div>
-                    <h4>Proposal</h4>
-                    <p>We present clear, straightforward recommendations with transparent pricing and coverage details.</p>
-                </div>
-
-                <div class="process-step">
-                    <div class="step-number">04</div>
-                    <h4>Protection</h4>
-                    <p>Once activated, we provide ongoing support, annual reviews, and responsive claims assistance.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="cta-content">
-            <h2>Ready to Discuss Your Coverage?</h2>
-            <p>Schedule a private consultation with our team. No obligations, just expert guidance.</p>
-            <a href="#contact" class="btn-primary large">Book Consultation</a>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="contact-grid">
-            <div class="contact-info">
-                <span class="section-label">Get In Touch</span>
-                <h2 class="section-title">Visit Our Office</h2>
-                
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <div class="contact-icon">📍</div>
-                        <div>
-                            <div class="contact-label">Location</div>
-                            <div class="contact-value">4144 Highway 3<br>Chester, NS B0J 1J0</div>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">📞</div>
-                        <div>
-                            <div class="contact-label">Phone</div>
-                            <a href="tel:902-275-5358" class="contact-value">902-275-5358</a>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">✉️</div>
-                        <div>
-                            <div class="contact-label">Email</div>
-                            <a href="/cdn-cgi/l/email-protection#dabbb2bfb3a9b6bfa89aa9b5afaeb2a9b2b5a8bfb3b4a9afa8bbb4b9bff4b9bb" class="contact-value"><span class="__cf_email__" data-cfemail="abcac3cec2d8c7ced9ebd8c4dedfc3d8c3c4d9cec2c5d8ded9cac5c8ce85c8ca">[email&#160;protected]</span></a>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">🕒</div>
-                        <div>
-                            <div class="contact-label">Office Hours</div>
-                            <div class="contact-value">Monday–Friday<br>9:00 AM – 5:00 PM</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="affiliations">
-                    <div class="affiliation-badge">
-                        <span>Member of IBANS</span>
-                    </div>
-                    <div class="affiliation-badge">
-                        <span>Advocis Professional</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="contact-form-wrapper">
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder="Full Name" required>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="email" id="email" placeholder="Email Address" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" placeholder="Phone Number" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <select id="service" required>
-                            <option value="">Coverage Interest</option>
-                            <option value="marine">Marine & Yacht</option>
-                            <option value="property">Waterfront Property</option>
-                            <option value="auto">Auto & Recreational</option>
-                            <option value="business">Business</option>
-                            <option value="life">Life & Estate</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <textarea id="message" placeholder="Tell us about your insurance needs..." rows="5" required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn-primary">Send Inquiry</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-main">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <div class="logo-line"></div>
-                        <div class="logo-text">
-                            <span class="logo-main">SOUTH SHORE</span>
-                            <span class="logo-sub">Insurance Agency</span>
-                        </div>
-                    </div>
-                    <p class="footer-tagline">Independent brokerage serving Chester's coastal community since 1996.</p>
-                </div>
-
-                <div class="footer-links">
-                    <div class="footer-col">
-                        <h4>Services</h4>
-                        <a href="#services">Marine & Yacht</a>
-                        <a href="#services">Waterfront Property</a>
-                        <a href="#services">Auto & Recreational</a>
-                        <a href="#services">Business Insurance</a>
-                    </div>
-
-                    <div class="footer-col">
-                        <h4>Company</h4>
-                        <a href="#about">About Us</a>
-                        <a href="#contact">Contact</a>
-                        <a href="tel:902-275-5358">902-275-5358</a>
-                    </div>
-
-                    <div class="footer-col">
-                        <h4>Location</h4>
-                        <p>4144 Highway 3<br>Chester, NS B0J 1J0</p>
-                        <p style="margin-top: 1rem;">Monday–Friday<br>9:00 AM – 5:00 PM</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 South Shore Insurance Agency. All rights reserved.</p>
-                <div class="footer-badges">
-                    <span>IBANS Member</span>
-                    <span>•</span>
-                    <
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  h1 { font-size: 2.8rem; }
+  h2 { font-size: 2.2rem; }
+  .hero { height: 80vh; min-height: 500px; }
+  .hero-ctas { flex-direction: column; }
+}
