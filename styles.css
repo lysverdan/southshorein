@@ -239,35 +239,93 @@ button {
     overflow: hidden;
 }
 
-.hero::before {
-    content: '';
+/* Hero Graphics - Bold Geometric Elements */
+.hero-graphics {
     position: absolute;
-    top: -50%;
-    right: -10%;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, transparent 70%);
-    border-radius: 50%;
+    inset: 0;
     z-index: 5;
-    animation: float 20s ease-in-out infinite;
+    pointer-events: none;
 }
 
-.hero::after {
-    content: '';
+.graphic-circle {
     position: absolute;
-    bottom: -20%;
-    left: -5%;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, transparent 70%);
+    border: 3px solid rgba(14, 165, 233, 0.3);
     border-radius: 50%;
-    z-index: 5;
-    animation: float 15s ease-in-out infinite reverse;
 }
 
-@keyframes float {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(-30px, 30px) scale(1.1); }
+.graphic-1 {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    right: 10%;
+    border-width: 2px;
+    animation: rotate 30s linear infinite;
+}
+
+.graphic-2 {
+    width: 250px;
+    height: 250px;
+    bottom: 10%;
+    left: 5%;
+    border-width: 3px;
+    animation: rotate 20s linear infinite reverse;
+}
+
+.graphic-line {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.4), transparent);
+}
+
+.line-1 {
+    width: 300px;
+    top: 20%;
+    right: 15%;
+    transform: rotate(-15deg);
+}
+
+.line-2 {
+    width: 200px;
+    bottom: 30%;
+    left: 10%;
+    transform: rotate(25deg);
+}
+
+.graphic-dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: var(--ocean-bright);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.6);
+}
+
+.dot-1 {
+    top: 15%;
+    right: 20%;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.dot-2 {
+    top: 60%;
+    right: 8%;
+    animation: pulse 4s ease-in-out infinite 0.5s;
+}
+
+.dot-3 {
+    bottom: 25%;
+    left: 15%;
+    animation: pulse 3.5s ease-in-out infinite 1s;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.5); opacity: 1; }
 }
 
 .hero-image {
