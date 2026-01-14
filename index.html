@@ -1,113 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>South Shore Insurance Agency | Chester, Nova Scotia</title>
+  <meta name="description" content="Protect what matters most with local expertise in Chester, NS."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* All CSS inline - no separate file needed */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background: #f8f9fa;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: #001f3f; /* Deep navy */
+    }
+    h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+    h2 { font-size: 2.8rem; margin-bottom: 1.5rem; text-align: center; }
+    h3 { font-size: 1.8rem; margin-bottom: 1rem; }
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    .primary { background: #001f3f; color: white; }
+    .primary:hover { background: #003366; }
+    .secondary { border: 2px solid #b8860b; color: #b8860b; }
+    .secondary:hover { background: #b8860b; color: white; }
+    /* Hero - calm coastal water (serene NS vibe, royalty-free) */
+    .hero {
+      height: 90vh;
+      min-height: 600px;
+      background: linear-gradient(rgba(0, 31, 63, 0.55), rgba(0, 31, 63, 0.55)),
+                  url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-content { max-width: 800px; padding: 20px; }
+    .hero p { font-size: 1.5rem; margin-bottom: 2rem; }
+    .hero-ctas { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+    .about, .why, .contact { padding: 80px 0; text-align: center; }
+    .services { background: #fff; padding: 80px 0; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .service-card {
+      background: #f8f9fa;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+    .service-card:hover { transform: translateY(-10px); }
+    .why ul { list-style: none; max-width: 700px; margin: 0 auto; }
+    .why li { font-size: 1.3rem; margin: 20px 0; padding-left: 40px; position: relative; }
+    .why li::before { content: "✓"; color: #b8860b; position: absolute; left: 0; font-size: 1.8rem; }
+    footer {
+      background: #001f3f;
+      color: white;
+      text-align: center;
+      padding: 40px 0;
+    }
+    @media (max-width: 768px) {
+      h1 { font-size: 2.8rem; }
+      h2 { font-size: 2.2rem; }
+      .hero { height: 80vh; min-height: 500px; }
+      .hero-ctas { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
 
-* { margin:0; padding:0; box-sizing:border-box; }
-body {
-  font-family: 'Open Sans', sans-serif;
-  color: #333;
-  line-height: 1.6;
-  background: #f8f9fa;
-}
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Protect What Matters Most</h1>
+      <p>South Shore Insurance Agency – Chester, Nova Scotia</p>
+      <div class="hero-ctas">
+        <a href="tel:9022755358" class="btn primary">Call 902-275-5358</a>
+        <a href="#contact" class="btn secondary">Get a Quote</a>
+      </div>
+    </div>
+  </header>
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+  <section class="about" id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>We're here to help you protect the things that matter most. With low rates, comprehensive coverage, and the best deals from top insurers, we shop for you.</p>
+      <p>Based in beautiful Chester, Nova Scotia, our experienced team has been serving the South Shore for over 28 years. Led by Aileen Heisler, a long-time Chester resident, our brokers bring deep local knowledge and personalized service to every client.</p>
+      <p>Whether it's your home, boat, business, or family – we treat your insurance like our own.</p>
+    </div>
+  </section>
 
-/* Typography */
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  color: #001f3f; /* Deep navy */
-}
+  <section class="services">
+    <div class="container">
+      <h2>Our Insurance Services</h2>
+      <div class="services-grid">
+        <div class="service-card"><h3>Home & Property</h3><p>Protect your home, cottage, or estate with comprehensive coverage tailored to South Shore properties.</p></div>
+        <div class="service-card"><h3>Auto & Marine</h3><p>From daily drivers to boats and yachts – reliable coverage for land and sea.</p></div>
+        <div class="service-card"><h3>Business</h3><p>Custom solutions for local businesses, large estates, and everything in between.</p></div>
+        <div class="service-card"><h3>Disability & Critical Illness</h3><p>Financial security when you need it most.</p></div>
+        <div class="service-card"><h3>Travel</h3><p>Peace of mind wherever your adventures take you.</p></div>
+        <div class="service-card"><h3>Health & Dental</h3><p>Affordable plans to keep you and your family healthy.</p></div>
+        <div class="service-card"><h3>Life Insurance</h3><p>Secure your loved ones' future with the right protection.</p></div>
+      </div>
+    </div>
+  </section>
 
-h1 { font-size: 3.5rem; margin-bottom: 1rem; }
-h2 { font-size: 2.8rem; margin-bottom: 1.5rem; text-align: center; }
-h3 { font-size: 1.8rem; margin-bottom: 1rem; }
+  <section class="why">
+    <div class="container">
+      <h2>Why Choose South Shore Insurance?</h2>
+      <ul>
+        <li>28+ years serving Chester and the South Shore</li>
+        <li>Highly experienced, local brokers</li>
+        <li>Competitive rates from multiple top insurers</li>
+        <li>Personalized, no-pressure service</li>
+        <li>Focus on protecting what matters in our coastal community</li>
+      </ul>
+    </div>
+  </section>
 
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 14px 32px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-.primary { background: #001f3f; color: white; }
-.primary:hover { background: #003366; }
-.secondary { background: transparent; border: 2px solid #b8860b; color: #b8860b; }
-.secondary:hover { background: #b8860b; color: white; }
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Let's Talk</h2>
+      <p>Ready to discuss your insurance needs? We're here for you.</p>
+      <a href="tel:9022755358" class="btn primary">Speak with a Broker: 902-275-5358</a>
+    </div>
+  </section>
 
-/* Hero - Unsplash direct URL, calm coastal vibe */
-.hero {
-  height: 90vh;
-  min-height: 600px;
-  background: linear-gradient(rgba(0, 31, 63, 0.6), rgba(0, 31, 63, 0.6)), 
-              url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80') center/cover no-repeat;
-  position: relative;
-  color: white;
-  text-align: center;
-  display: flex;
-  align-items: center;
-}
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hero p { font-size: 1.5rem; margin-bottom: 2rem; }
-.hero-ctas { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+  <footer>
+    <div class="container">
+      <p>© 2026 South Shore Insurance Agency | Chester, Nova Scotia | Serving the South Shore with Pride</p>
+    </div>
+  </footer>
 
-/* Sections */
-.about, .why, .contact {
-  padding: 80px 0;
-  text-align: center;
-}
-.services { background: #fff; padding: 80px 0; }
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-.service-card {
-  background: #f8f9fa;
-  padding: 40px 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: transform 0.3s;
-}
-.service-card:hover { transform: translateY(-10px); }
-
-/* Why List */
-.why ul {
-  list-style: none;
-  max-width: 700px;
-  margin: 0 auto;
-}
-.why li {
-  font-size: 1.3rem;
-  margin: 20px 0;
-  padding-left: 40px;
-  position: relative;
-}
-.why li::before { content: "✓"; color: #b8860b; position: absolute; left: 0; font-size: 1.8rem; }
-
-/* Footer */
-footer {
-  background: #001f3f;
-  color: white;
-  text-align: center;
-  padding: 40px 0;
-  font-size: 0.9rem;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  h1 { font-size: 2.8rem; }
-  h2 { font-size: 2.2rem; }
-  .hero { height: 80vh; min-height: 500px; }
-  .hero-ctas { flex-direction: column; }
-}
+</body>
+</html>
