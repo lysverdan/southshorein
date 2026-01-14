@@ -1,5 +1,6 @@
-/* Clean CSS - No downloads needed */
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
   font-family: 'Open Sans', sans-serif;
   color: #333;
@@ -7,7 +8,11 @@ body {
   background: #f8f9fa;
 }
 
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
@@ -26,35 +31,46 @@ h3 { font-size: 1.8rem; margin-bottom: 1rem; }
   font-weight: 600;
   transition: all 0.3s;
 }
+
 .primary { background: #001f3f; color: white; }
 .primary:hover { background: #003366; }
+
 .secondary { border: 2px solid #b8860b; color: #b8860b; }
 .secondary:hover { background: #b8860b; color: white; }
 
-/* Hero with free Unsplash coastal calm (rocky-ish NS vibe) */
+/* Hero - calm coastal water (NS-inspired, rocky calm bay feel) */
 .hero {
   height: 90vh;
   min-height: 600px;
   background: linear-gradient(rgba(0, 31, 63, 0.55), rgba(0, 31, 63, 0.55)),
               url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80') center/cover no-repeat;
-  position: relative;
   color: white;
   text-align: center;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
-.hero-content { position: relative; z-index: 1; }
+
+.hero-content { max-width: 800px; padding: 20px; }
+
 .hero p { font-size: 1.5rem; margin-bottom: 2rem; }
+
 .hero-ctas { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
 
 .about, .why, .contact { padding: 80px 0; text-align: center; }
-.services { background: #fff; padding: 80px 0; }
+
+.services {
+  background: #fff;
+  padding: 80px 0;
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   margin-top: 40px;
 }
+
 .service-card {
   background: #f8f9fa;
   padding: 40px 30px;
@@ -62,11 +78,29 @@ h3 { font-size: 1.8rem; margin-bottom: 1rem; }
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   transition: transform 0.3s;
 }
+
 .service-card:hover { transform: translateY(-10px); }
 
-.why ul { list-style: none; max-width: 700px; margin: 0 auto; }
-.why li { font-size: 1.3rem; margin: 20px 0; padding-left: 40px; position: relative; }
-.why li::before { content: "✓"; color: #b8860b; position: absolute; left: 0; font-size: 1.8rem; }
+.why ul {
+  list-style: none;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.why li {
+  font-size: 1.3rem;
+  margin: 20px 0;
+  padding-left: 40px;
+  position: relative;
+}
+
+.why li::before {
+  content: "✓";
+  color: #b8860b;
+  position: absolute;
+  left: 0;
+  font-size: 1.8rem;
+}
 
 footer {
   background: #001f3f;
@@ -77,6 +111,7 @@ footer {
 
 @media (max-width: 768px) {
   h1 { font-size: 2.8rem; }
+  h2 { font-size: 2.2rem; }
   .hero { height: 80vh; min-height: 500px; }
   .hero-ctas { flex-direction: column; }
 }
